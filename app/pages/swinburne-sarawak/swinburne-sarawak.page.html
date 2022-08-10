@@ -1,0 +1,320 @@
+<!-- Header -->
+<ion-header>
+  <!-- Nav Bar -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="/home" class="nav-logo">
+        <img slot="start" src="assets/Uni-Verse.png">
+      </a>
+
+      <ul #navMenu class="nav-menu">
+        <li class="nav-item">
+          <a href="/university" class="nav-link">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a href="/swinburne-sarawak" class="nav-link">Setting</a>
+        </li>
+        <li class="nav-item">
+          <a href="/university" class="nav-link">University</a>
+        </li>
+        <li class="nav-item">
+          <a href="/accomodation" class="nav-link">Accomodation</a>
+        </li>
+        <li class="nav-item">
+          <a href="/about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Log In</a>
+        </li>
+      </ul>
+
+      <div #hamburger class="hamburger" (click)="mobileMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+</ion-header>
+
+<ion-content>
+  <!-- fab placed to the bottom end -->
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed" class="scrollTop" [ngClass]="{'onWindowScroll': scrollToTop}">
+    <ion-fab-button>
+      <ion-icon name="chevron-up-sharp" class="scrollTopIcon"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <div class="spotlight">
+    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/muD8lBkuxzU" 
+    title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+    encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+  </div>
+
+  <div class="uni-name">
+    <img class="uni-logo" src="/assets/FinalUniLogo/SUT.png">
+    <div class="uni-header">
+      <h1>Swinburne University of Technology Sarawak</h1>
+
+      <div class="working-hour">
+        <h2>(Working Hours | Mon - Fri: 7:00am to 5:00pm | Sat - Sun: 9:00am to 5:00pm)</h2>
+      </div>
+
+      <div class="button">
+        <ion-icon class="call" name="call-outline"></ion-icon>
+        <ion-icon class="message" name="chatbubble-ellipses-outline" slot="icon-only"></ion-icon>
+      </div>
+    </div>
+  </div>
+
+  <!-- Image Section -->
+  <div class="imgSection">
+    <h1 class="header-text">Campus Images</h1>
+
+    <swiper class="contentSwiper" #uniImgSwiper [config]="uniImgConfig" (slideChange)="swiperSlideChanged($event)">
+      <ng-template swiperSlide>
+        <div class="swiper-zoom-container">
+          <img data-src="assets/swinburne1.png" class="swiper-lazy">
+          <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+        </div>
+      </ng-template>
+      <ng-template swiperSlide>
+        <div class="swiper-zoom-container">
+          <img data-src="assets/swinburne2.png" class="swiper-lazy">
+          <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+        </div>
+      </ng-template>
+    </swiper>
+  </div>
+
+  <!-- Course & Programmes -->
+  <div class="courseSection">
+    <h1 class="header-text">Courses & Programmes</h1>
+    <h5 class="sub-header-text">Check out the courses and programmes we offer</h5>
+
+    <section>
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col">
+            <div class="card-container" id="demo">
+              <div class="cardww" tabindex="0" routerLink="/course"><h2>Foundation</h2><img src="../assets/course-img1.png"></div>
+              <div class="cardww" tabindex="0" routerLink="/course"><h2>Diploma</h2><img src="../assets/course-img2.png"></div>
+              <div class="cardww" tabindex="0" routerLink="/course"><h2>Degree</h2><img src="../assets/course-img3.png"></div>
+              <div class="cardww" tabindex="0" routerLink="/course"><h2>Masters</h2><img src="../assets/course-img4.png"></div>
+              <div class="cardww" tabindex="0" routerLink="/course"><h2>PhD</h2><img src="../assets/course-img5.png"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <!-- Latest News -->
+  <div class="newsSection">
+    <h1 class="header-text">Latest News</h1>
+
+    <div class="news-flex">
+      <div class="card-container">
+        <div class="card card-1">
+          <div class="card-img"></div>
+          <a href="" class="card-link">
+            <div class="card-img-hovered"></div>
+          </a>
+          <div class="card-info">
+            <div class="card-about">
+              <a class="card-tag tag-news">NEWS</a>
+            <div class="card-time">6/11/2018</div>
+            </div>
+            <h1 class="card-title">There have been big Tesla accident at New Jersey</h1>
+            <div class="card-creator">by Sardorbek Usmonov</div>
+          </div>
+        </div>
+  
+        <div class="card card-2">
+          <div class="card-img"></div>
+          <a href="" class="card-link">
+            <div class="card-img-hovered"></div>
+          </a>
+          <div class="card-info">
+            <div class="card-about">
+              <a class="card-tag">Tech</a>
+            <div class="card-time">6/07/2018</div>
+            </div>
+            <h1 class="card-title">Samsung laptops is exploding again</h1>
+            <div class="card-creator">by Tyler Platt</div>
+          </div>
+        </div>
+  
+        <div class="card card-3">
+          <div class="card-img"></div>
+          <a href="" class="card-link">
+            <div class="card-img-hovered"></div>
+          </a>
+          <div class="card-info">
+            <div class="card-about">
+              <a class="card-tag tag-deals">Deals</a>
+            <div class="card-time">5/27/2018</div>
+            </div>
+            <h1 class="card-title">Apple is having big Sale for the first time</h1>
+            <div class="card-creator">by Timur Mirzoyev</div>
+          </div>
+        </div>
+  
+        <div class="card card-4">
+          <div class="card-img"></div>
+          <a href="" class="card-link">
+            <div class="card-img-hovered"></div>
+          </a>
+          <div class="card-info">
+            <div class="card-about">
+              <a class="card-tag tag-politics">Politics</a>
+            <div class="card-time">5/20/2018</div>
+            </div>
+            <h1 class="card-title">Net-Nutrality is coming to its end</h1>
+            <div class="card-creator">by Gregoy Trem</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="news-swiper">
+      <swiper class="newsSwiper" #newsSwiper [config]="newsConfig" (slideChange)="swiperSlideChanged($event)">
+        <ng-template swiperSlide>
+          <div class="card card-1">
+            <div class="card-img"></div>
+            <a href="" class="card-link">
+              <div class="card-img-hovered"></div>
+            </a>
+            <div class="card-info">
+              <div class="card-about">
+                <a class="card-tag tag-news">NEWS</a>
+              <div class="card-time">6/11/2018</div>
+              </div>
+              <h1 class="card-title">There have been big Tesla accident at New Jersey</h1>
+              <div class="card-creator">by Sardorbek Usmonov</div>
+            </div>
+          </div>
+        </ng-template>
+    
+        <ng-template swiperSlide>
+          <div class="card card-2">
+            <div class="card-img"></div>
+            <a href="" class="card-link">
+              <div class="card-img-hovered"></div>
+            </a>
+            <div class="card-info">
+              <div class="card-about">
+                <a class="card-tag">Tech</a>
+              <div class="card-time">6/07/2018</div>
+              </div>
+              <h1 class="card-title">Samsung laptops is exploding again</h1>
+              <div class="card-creator">by Tyler Platt</div>
+            </div>
+          </div>
+        </ng-template>
+    
+        <ng-template swiperSlide>
+          <div class="card card-3">
+            <div class="card-img"></div>
+            <a href="" class="card-link">
+              <div class="card-img-hovered"></div>
+            </a>
+            <div class="card-info">
+              <div class="card-about">
+                <a class="card-tag tag-deals">Deals</a>
+              <div class="card-time">5/27/2018</div>
+              </div>
+              <h1 class="card-title">Apple is having big Sale for the first time</h1>
+              <div class="card-creator">by Timur Mirzoyev</div>
+            </div>
+          </div>
+        </ng-template>
+    
+        <ng-template swiperSlide>
+          <div class="card card-4">
+            <div class="card-img"></div>
+            <a href="" class="card-link">
+              <div class="card-img-hovered"></div>
+            </a>
+            <div class="card-info">
+              <div class="card-about">
+                <a class="card-tag tag-politics">Politics</a>
+              <div class="card-time">5/20/2018</div>
+              </div>
+              <h1 class="card-title">Net-Nutrality is coming to its end</h1>
+              <div class="card-creator">by Gregoy Trem</div>
+            </div>
+          </div>
+        </ng-template>
+      </swiper>
+    </div>
+  </div>
+
+  <!-- Alumni Testimony -->
+  <div class="alumniSection">
+    <h1 class="header-text">What do our alumnus say?</h1>
+
+    <swiper class="alumniSwiper" #alumniSwiper [config]="alumniConfig" (slideChange)="swiperSlideChanged($event)">
+      <ng-template swiperSlide>
+        <div class="container">
+          <div class="testimonial-card">
+            <div class="text">Lorem ipsum dolor sit amet consectetur elit. Ipsa voluptatum ipsum, laudantium minima aliquam porro? Iste,  Et, esta ah 
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M96 224C84.72 224 74.05 226.3 64 229.9V224c0-35.3 28.7-64 64-64c17.67 0 32-14.33 32-32S145.7 96 128 96C57.42 96 0 153.4 0 224v96c0 53.02 42.98 96 96 96s96-42.98 96-96S149 224 96 224zM352 224c-11.28 0-21.95 2.305-32 5.879V224c0-35.3 28.7-64 64-64c17.67 0 32-14.33 32-32s-14.33-32-32-32c-70.58 0-128 57.42-128 128v96c0 53.02 42.98 96 96 96s96-42.98 96-96S405 224 352 224z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M96 96C42.98 96 0 138.1 0 192s42.98 96 96 96c11.28 0 21.95-2.305 32-5.879V288c0 35.3-28.7 64-64 64c-17.67 0-32 14.33-32 32s14.33 32 32 32c70.58 0 128-57.42 128-128V192C192 138.1 149 96 96 96zM448 192c0-53.02-42.98-96-96-96s-96 42.98-96 96s42.98 96 96 96c11.28 0 21.95-2.305 32-5.879V288c0 35.3-28.7 64-64 64c-17.67 0-32 14.33-32 32s14.33 32 32 32c70.58 0 128-57.42 128-128V192z"/></svg>
+            </div>  
+            
+            <div class="footer">
+              <div class="image">
+          
+              </div>
+               <h3 class='person'>Jane Doe</h3>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+
+      <ng-template swiperSlide>
+        <div class="container">
+          <div class="testimonial-card">
+            <div class="text">Lorem ipsum dolor sit amet consectetur elit. Ipsa voluptatum ipsum, laudantium minima aliquam porro? Iste,  Et, esta ah 
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tenetur obcaecati magnam numquam magni, necessitatibus distinctio officia neque ipsum! Optio aliquam, eos fugiat numquam quisquam aspernatur voluptates corporis cum molestiae.
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M96 224C84.72 224 74.05 226.3 64 229.9V224c0-35.3 28.7-64 64-64c17.67 0 32-14.33 32-32S145.7 96 128 96C57.42 96 0 153.4 0 224v96c0 53.02 42.98 96 96 96s96-42.98 96-96S149 224 96 224zM352 224c-11.28 0-21.95 2.305-32 5.879V224c0-35.3 28.7-64 64-64c17.67 0 32-14.33 32-32s-14.33-32-32-32c-70.58 0-128 57.42-128 128v96c0 53.02 42.98 96 96 96s96-42.98 96-96S405 224 352 224z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M96 96C42.98 96 0 138.1 0 192s42.98 96 96 96c11.28 0 21.95-2.305 32-5.879V288c0 35.3-28.7 64-64 64c-17.67 0-32 14.33-32 32s14.33 32 32 32c70.58 0 128-57.42 128-128V192C192 138.1 149 96 96 96zM448 192c0-53.02-42.98-96-96-96s-96 42.98-96 96s42.98 96 96 96c11.28 0 21.95-2.305 32-5.879V288c0 35.3-28.7 64-64 64c-17.67 0-32 14.33-32 32s14.33 32 32 32c70.58 0 128-57.42 128-128V192z"/></svg>
+            </div>  
+            
+            <div class="footer">
+              <div class="image">
+          
+              </div>
+               <h3 class='person'>Jane Doe</h3>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+
+      <ng-template swiperSlide>
+        <div class="container">
+          <div class="testimonial-card">
+            <div class="text">Lorem ipsum dolor sit amet consectetur elit. Ipsa voluptatum ipsum, laudantium minima aliquam porro? Iste,  Et, esta ah 
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M96 224C84.72 224 74.05 226.3 64 229.9V224c0-35.3 28.7-64 64-64c17.67 0 32-14.33 32-32S145.7 96 128 96C57.42 96 0 153.4 0 224v96c0 53.02 42.98 96 96 96s96-42.98 96-96S149 224 96 224zM352 224c-11.28 0-21.95 2.305-32 5.879V224c0-35.3 28.7-64 64-64c17.67 0 32-14.33 32-32s-14.33-32-32-32c-70.58 0-128 57.42-128 128v96c0 53.02 42.98 96 96 96s96-42.98 96-96S405 224 352 224z"/></svg>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M96 96C42.98 96 0 138.1 0 192s42.98 96 96 96c11.28 0 21.95-2.305 32-5.879V288c0 35.3-28.7 64-64 64c-17.67 0-32 14.33-32 32s14.33 32 32 32c70.58 0 128-57.42 128-128V192C192 138.1 149 96 96 96zM448 192c0-53.02-42.98-96-96-96s-96 42.98-96 96s42.98 96 96 96c11.28 0 21.95-2.305 32-5.879V288c0 35.3-28.7 64-64 64c-17.67 0-32 14.33-32 32s14.33 32 32 32c70.58 0 128-57.42 128-128V192z"/></svg>
+            </div>  
+            
+            <div class="footer">
+              <div class="image">
+          
+              </div>
+               <h3 class='person'>Jane Doe</h3>
+            </div>
+          </div>
+        </div>
+      </ng-template>
+    </swiper>
+  </div>
+
+  <!-- Locaion -->
+  <div class="map">
+    <h1 class="header-text">Location</h1>
+    <div class="gmap_canvas"><iframe width="100%" height="100%" id="gmap_canvas" src="https://maps.google.com/maps?q=jalan%20simpang%20tiga,%20swinburne&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.whatismyip-address.com"></a><br><style>.mapouter{position:relative;text-align:right;height:600px;width:600px;}</style><a href="https://www.embedgooglemap.net">embedgooglemap.net</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:600px;width:100%;}</style></div>
+  </div>
+</ion-content>

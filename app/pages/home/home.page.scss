@@ -1,0 +1,702 @@
+ion-header {
+  .header {
+    background: #0074D9;
+
+    li {
+      list-style: none;
+    }
+    
+    a {
+      text-decoration: none;
+    }
+    
+    .header{
+      border-bottom: 1px solid #E2E8F0;
+    }
+    
+    .navbar {
+      display: flex;
+      justify-content:space-between;
+      align-items: center;
+      padding: 0rem 1.5rem;
+    }
+    
+    .hamburger {
+      display: none;
+    }
+    
+    .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      background-color: #ffffff;
+    }
+    
+    .nav-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .nav-item {
+      margin-left: 2.5rem;
+    }
+    
+    .nav-link{
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #ffffff;
+    }
+    
+    .nav-link:hover,
+    .nav-link:active {
+      color: #ffffff;
+    }
+    
+    .nav-link:after,
+    .nav-link:before {
+      backface-visibility: hidden;
+      border: 1px solid rgba(#ffffff, 0);
+      bottom: 0px;
+      content: " ";
+      display: block;
+      margin: 0 auto;
+      position: relative;
+      transition: all 280ms ease-in-out;
+      width: 0;
+    }
+    
+    .nav-link:hover:after,
+    .nav-link:hover:before {
+      backface-visibility: hidden;
+      border-color: #ffffff;
+      transition: width 350ms ease-in-out;
+      width: 70%;
+    }
+    
+    .nav-link:hover:before {
+      bottom: auto;
+      top: 0;
+      width: 70%;
+    }
+    
+    .nav-logo {
+      flex-shrink: 0;
+      width: 150px;
+      margin-right: 10px;
+      margin-left: 10px;
+    }
+    
+    @media only screen and (max-width: 940px) {
+
+      li {
+        list-style: none;
+      }
+
+      .nav-menu {
+          position: fixed;
+          width: 100%;
+          left: -100%;
+          top: 3.17rem;
+          padding: 0;
+          margin: 0;
+          flex-direction: column;
+          text-align: center;
+          background-color: #0074D9;
+          border-radius: 0px  0px 10px 10px;
+          box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
+          transition: ease-in-out 0.3s;
+      }
+      
+      .nav-menu.active {
+          left: 0%;
+      }
+    
+      .nav-item {
+          margin: 0.8rem 0;
+          padding-left: 0px;
+      }
+    
+      .hamburger {
+          display: block;
+          cursor: pointer;
+      }
+    
+      .hamburger.active .bar:nth-child(2) {
+          opacity: 0;
+      }
+    
+      .hamburger.active .bar:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+      }
+    
+      .hamburger.active .bar:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+  }
+}
+
+.spotlight {
+  .spotlight-flex {
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+    .text-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      opacity: 0;
+      position: relative;
+      text-align: center;
+      color: #fff;
+      background: rgb(0 0 0 / 50%);
+      transition: ease-in-out 0.3s;
+
+      .text-content {
+        .bold {
+          font-size: 3em;
+          line-height: 1em;
+          white-space: nowrap;
+        }
+
+        .big {
+          font-size: 4em;
+          font-weight: 800;
+          text-transform: uppercase;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    .university-side {
+      .background-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url("/assets/university.jpg");
+        filter: blur(0px);
+        -webkit-filter: blur(0px);
+        transition: ease-in-out 0.3s;
+      }
+    }
+
+    .accomodation-side {
+      .background-img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url("/assets/hostel.jfif");
+        filter: blur(0px);
+        -webkit-filter: blur(0px);
+        transition: ease-in-out 0.3s;
+      }
+    }
+
+    .university-side,
+    .accomodation-side {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+
+      a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+      }
+
+      &:hover {
+        position: relative;
+        cursor: pointer;
+
+        .background-img {
+          filter: blur(8px);
+          -webkit-filter: blur(8px);
+        }
+
+        .text-container {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 1300px) {
+    .spotlight-flex {
+      display: block;
+  
+      .university-side,
+      .accomodation-side {
+        height: 50vh;
+  
+        .text-container {
+          .text-content {
+            .bold {
+              font-size: 2em;
+              line-height: 1em;
+              white-space: nowrap;
+            }
+    
+            .big {
+              font-size: 3em;
+              font-weight: 800;
+              text-transform: uppercase;
+              white-space: wrap;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// ion-footer {
+// .footer {
+//   display: flex;
+//   justify-content: space-between;
+//   background: #0074D9;
+//   padding: 1rem;
+//   border-top: 3px solid lighten($color: #000000, $amount: 85);
+
+//   .logo {
+//     flex-shrink: 0;
+//     img {
+//       width: 150px;
+//       margin-right: 10px;
+//       margin-left: 10px;
+//     }
+//   }
+
+//   .explore {
+//     h1 {
+//       font-size: 20px;
+//       font-weight: 700;
+//       font-family: 'roboto';
+//       margin: 0.5rem 1rem;
+//       text-decoration: underline;
+//       color: #000;
+//     }
+//     ul {
+//       display: flex;
+//       flex-wrap: wrap;
+//       margin: 0;
+//       padding: 0;
+//     }
+
+//     li {
+//       list-style: none;
+//     }
+    
+//     a {
+//       text-decoration: none;
+//     }
+
+//     .explore-item {
+//       margin: 0.3rem 1rem;
+//     }
+    
+//     .explore-link{
+//       font-size: 16px;
+//       font-weight: 400;
+//       color: #ffffff;
+
+//       &:hover,
+//       &:active {
+//         border-bottom: 1px solid #ffffff;
+//       }
+//     }
+//   }
+
+//   .follow {
+//     h1 {
+//       font-size: 20px;
+//       font-weight: 700;
+//       font-family: 'roboto';
+//       margin: 0.5rem 1rem;
+//       text-decoration: underline;
+//       color: #000;
+//     }
+
+//     .social-buttons {
+//       display: flex;
+//       flex-wrap: wrap;
+//       justify-content: center;
+  
+//       &__button {
+//           margin: 10px 5px 0;
+//       }
+//     }
+    
+//     $social-button-size: 50px;
+//     $social-button-icon-size: 0.4;
+//     $social-button-background: #fff;
+//     $social-button-active-color: #fff;
+//     $social-button-transition-time: 0.3s;
+    
+//     $social-button-colors: (
+//       'mail': #0072c6,
+//       'facebook': #3b5999,
+//       'twitter': #55acee,
+//       'linkedin': #0077b5,
+//       'github': #6e5494,
+//       'codepen': #212121,
+//       'steam': #7da10e,
+//       'snapchat': #eec900,
+//       'instagram': #833ab4,
+//       'reddit': #FF4301,
+//       'youtube': #FF0000,
+//       'google': #7CFC00,
+//     );
+    
+//     .social-button {
+//       position: relative;
+//       display: flex;
+//       justify-content: center;
+//       align-items: center;
+//       outline: none;
+//       width: $social-button-size;
+//       height: $social-button-size;
+//       text-decoration: none;
+//       border-radius: 100%;
+//       background: $social-button-background;
+//       text-align: center;
+    
+//       &::after {
+//         content: '';
+//         position: absolute;
+//         top: -1px;
+//         left: 50%;
+//         display: block;
+//         width: 0;
+//         height: 0;
+//         border-radius: 100%;
+//         transition: $social-button-transition-time;
+//       }
+    
+//       &:focus,
+//       &:hover {
+//         fill: $social-button-active-color;
+    
+//         &::after {
+//           width: calc(100% + 2px);
+//           height: calc(100% + 2px);
+//           margin-left: calc(-50% - 1px);
+//         }
+//       }
+    
+//       i,
+//       svg {
+//         position: relative;
+//         z-index: 1;
+//         transition: $social-button-transition-time;
+//       }
+    
+//       i {
+//         font-size: $social-button-size * $social-button-icon-size;
+//       }
+    
+//       svg {
+//         height: percentage($social-button-icon-size);
+//         width: percentage($social-button-icon-size);
+//       }
+    
+//       @each $name, $color in $social-button-colors {
+//         &--#{$name} {
+//           fill: $color;
+    
+//           &::after {
+//             background: $color;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+.footer {
+  background: #0074D9;
+
+  .flex-rw {
+    $primary-light-blue: #fff;
+    $primary-line-color: #A9E1FF;
+  
+    display: flex;
+    flex-flow: row wrap;
+  
+    .logo {
+      margin-top: 10px;
+      width: 100%;
+      height: 80px;
+      background-image: url(/assets/Uni-Verse.png);
+      object-fit: cover;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+    }
+    
+    li {
+      margin: 0rem 1rem;
+    }
+    
+    a {
+      text-decoration: none
+    }
+  
+    footer {
+      margin-top: auto;
+      width: 100%;
+    }
+    
+    .footer-list-top {
+      width: 100%;
+  
+      li {
+        text-align: center;
+        padding-bottom: 10px
+      }
+    }
+  
+    .footer-list-header {
+      padding: 10px 0 5px 0;
+      color: #000;
+      font: 2.3vw "Oswald", sans-serif
+    }
+    .footer-list-anchor {
+      font: 1.3em "Open Sans", sans-serif
+    }
+    .footer-social-section {
+      width: 100%;
+      align-items: center;
+      justify-content: space-around;
+      position: relative;
+      margin-top: 5px;
+    
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 10px;
+        border-top: 1px solid $primary-line-color;
+        width: calc(100% - 20px)
+      }
+    }
+  
+    .footer-social-overlap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      z-index: 2;
+      background: #0074D9;
+      padding: 0 20px;
+  
+      a {
+        width: 2em;
+        fill: #ffffff;
+      
+        &:hover {
+          fill: $primary-line-color ;
+        }
+  
+        &:not(:first-child) {
+          margin-left: 0.6em
+        }
+      }
+    }
+    .footer-social-connect {
+      display: flex;
+      align-items: center;
+      font: 3.5em "Oswald", sans-serif;
+      color: #fff
+    }
+    .footer-social-small {
+      font-size: 0.6em;
+      padding: 0px 20px
+    }
+
+    .footer-bottom-section {
+      width: 100%;
+      padding: 10px;
+      border-top: 1px solid $primary-line-color;
+      margin-top: 10px
+    }
+    .footer-bottom-section > div:first-child {
+      margin-right: auto
+    }
+    .footer-bottom-wrapper {
+      font-size: 1.5em;
+      color: #fff
+    }
+    .footer-address {
+      display: inline;
+      font-style: normal
+    }
+  
+    .generic-anchor {
+      color: $primary-light-blue;
+      &:visited {
+        color: $primary-light-blue
+      }
+      &:hover {
+        color: $primary-line-color
+      }
+    }
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .logo {
+      width: 100%;
+      height: 140px !important;
+      background-image: url(/assets/Uni-Verse-Inverted.png) !important;
+      object-fit: cover;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+    ul {
+      display: block !important;
+    }
+    .footer-list-header {
+      font-size: 2em
+    }
+    .footer-list-anchor {
+      font-size: 1.1em
+    }
+    .footer-social-connect {
+      font-size: 2.5em
+    }
+    .footer-social-overlap > a {
+      width: 2em;
+    }
+    .footer-bottom-wrapper {
+      font-size: 1.3em
+    }
+  }
+  @media only screen and (max-width: 568px) {
+    .logo {
+      width: 100%;
+      height: 130px !important;
+      background-image: url(/assets/Uni-Verse-Inverted.png) !important;
+      object-fit: cover;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+    ul {
+      display: block !important;
+    }
+    main {
+      font-size: 5em
+    }
+    .footer-list-top {
+      width: 100%
+    }
+    .footer-list-header {
+      font-size: 3em;
+    }
+    .footer-list-anchor {
+      font-size: 1.5em
+    }
+    .footer-social-section {
+      justify-content: center
+    }
+    .footer-social-section::after {
+      top: 25%
+    }
+    .footer-social-connect {
+      margin-bottom: 10px;
+      padding: 0 10px
+    }
+    .footer-social-overlap {
+      display: flex;
+      justify-content: center;
+    }
+    .footer-social-icons-wrapper {
+      width: 100%;
+      padding: 0
+    }
+    .footer-social-overlap > a:not(:first-child) {
+      margin-left: 20px;
+    }
+    .footer-bottom-section {
+      padding: 0 5px 10px 5px
+    }
+    .footer-bottom-wrapper {
+      text-align: center;
+      width: 100%;
+      margin-top: 10px
+    }
+  }
+  @media only screen and (max-width: 480px) {
+    .logo {
+      width: 100%;
+      height: 120px !important;
+      background-image: url(/assets/Uni-Verse-Inverted.png) !important;
+      object-fit: cover;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+    ul {
+      display: block !important;
+    }
+    .footer-social-overlap > a {
+      margin: auto
+    }
+    .footer-social-overlap > a:not(:first-child) {
+      margin-left: 0;
+    }
+    .footer-bottom-rights {
+      display: block
+    }
+  }
+  @media only screen and (max-width: 320px) {
+    .logo {
+      width: 100%;
+      height: 120px !important;
+      background-image: url(/assets/Uni-Verse-Inverted.png) !important;
+      object-fit: cover;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+    }
+    ul {
+      display: block !important;
+    }
+    .footer-list-header {
+      font-size: 2.2em
+    }
+    .footer-list-anchor {
+      font-size: 1.2em
+    }
+    .footer-social-connect {
+      font-size: 2.4em
+    }
+    .footer-social-overlap > a {
+      width: 2em;
+    }
+    .footer-bottom-wrapper {
+      font-size: 1.3em
+    }
+  }
+}

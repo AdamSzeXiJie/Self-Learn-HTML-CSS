@@ -1,0 +1,200 @@
+<!-- Header -->
+<ion-header>
+  <!-- Nav Bar -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="/home" class="nav-logo">
+        <img slot="start" src="assets/Uni-Verse.png">
+      </a>
+
+      <ul #navMenu class="nav-menu">
+        <li class="nav-item">
+          <a href="/university" class="nav-link">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a href="/swinburne-sarawak" class="nav-link">Setting</a>
+        </li>
+        <li class="nav-item">
+          <a href="/university" class="nav-link">University</a>
+        </li>
+        <li class="nav-item">
+          <a href="/accomodation" class="nav-link">Accomodation</a>
+        </li>
+        <li class="nav-item">
+          <a href="/about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Log In</a>
+        </li>
+      </ul>
+
+      <div #hamburger class="hamburger" (click)="mobileMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+</ion-header>
+
+<ion-content>
+  <div class="imgSection">
+    <swiper class="contentSwiper" #ImgSwiper [config]="ImgConfig" (slideChange)="swiperSlideChanged($event)">
+      <ng-template swiperSlide>
+        <div class="swiper-zoom-container">
+          <img data-src="assets/swinburne1.png" class="swiper-lazy">
+          <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+        </div>
+      </ng-template>
+
+      <ng-template swiperSlide>
+        <div class="swiper-zoom-container">
+          <img data-src="assets/swinburne2.png" class="swiper-lazy">
+          <div class="swiper-lazy-preloader swiper-lazy-preloader-black"></div>
+        </div>
+      </ng-template>
+    </swiper>
+  </div>
+
+  <div class="accomodation-detail">
+    <div>
+      <h1>Victoria Hall</h1>
+
+      <div class="working-hour">
+        <h2>(Working Hours | Mon - Fri: 7:00am to 5:00pm | Sat - Sun: 9:00am to 5:00pm)</h2>
+  
+        <div class="button">
+          <ion-icon class="call" name="call-outline"></ion-icon>
+          <ion-icon class="message" name="chatbubble-ellipses-outline" slot="icon-only"></ion-icon>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <ion-button class="booking"><ion-icon name="clipboard-outline"></ion-icon>Book Now</ion-button>
+    </div>
+
+  </div>
+
+
+  <div class="catalog">
+    <h1 class="header-text">Single Room</h1>
+
+    <div class="room">
+      <div class="room-detail">
+        <img src="/assets/FinalUniLogo/SUT.png">
+
+        <div class="details">
+          <div>
+            <h2 class="sub-header-text">Single Room With Fan</h2>
+  
+            <ul>
+              <li>1 Bed</li>
+              <li>1 Waredrobe</li>
+              <li>1 Study Desk and Chair</li>
+            </ul>
+          </div>
+  
+          <h3 class="cost">RM 500</h3>
+        </div>
+      </div>
+
+      <div class="room-detail">
+        <img src="/assets/FinalUniLogo/SUT.png">
+
+        <div class="details">
+          <div>
+            <h2 class="sub-header-text">Single Room With Fan</h2>
+  
+            <ul>
+              <li>1 Bed</li>
+              <li>1 Waredrobe</li>
+              <li>1 Study Desk and Chair</li>
+            </ul>
+          </div>
+  
+          <h3 class="cost">RM 500</h3>
+        </div>
+      </div>
+
+      <div class="room-detail">
+        <img src="/assets/FinalUniLogo/SUT.png">
+
+        <div class="details">
+          <div>
+            <h2 class="sub-header-text">Single Room With Fan</h2>
+  
+            <ul>
+              <li>1 Bed</li>
+              <li>1 Waredrobe</li>
+              <li>1 Study Desk and Chair</li>
+            </ul>
+          </div>
+  
+          <h3 class="cost">RM 500</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="catalog">
+    <h1 class="header-text">Twin Sharing Room</h1>
+
+    <div class="room">
+      <div class="room-detail">
+        <img src="/assets/FinalUniLogo/SUT.png">
+
+        <div class="details">
+          <div>
+            <h2 class="sub-header-text">Twin Sharing Room With Fan</h2>
+  
+            <ul>
+              <li>1 Bed</li>
+              <li>1 Waredrobe</li>
+              <li>1 Study Desk and Chair</li>
+            </ul>
+          </div>
+  
+          <h3 class="cost">RM 500</h3>
+        </div>
+      </div>
+
+      <div class="room-detail">
+        <img src="/assets/FinalUniLogo/SUT.png">
+
+        <div class="details">
+          <div>
+            <h2 class="sub-header-text">Twin Sharing Room With A/C</h2>
+  
+            <ul>
+              <li>1 Bed</li>
+              <li>1 Waredrobe</li>
+              <li>1 Study Desk and Chair</li>
+            </ul>
+          </div>
+  
+          <h3 class="cost">RM 500</h3>
+        </div>
+      </div>
+
+      <div class="room-detail">
+        <img src="/assets/FinalUniLogo/SUT.png">
+
+        <div class="details">
+          <div>
+            <h2 class="sub-header-text">Single Room With Fan</h2>
+  
+            <ul>
+              <li>1 Bed</li>
+              <li>1 Waredrobe</li>
+              <li>1 Study Desk and Chair</li>
+            </ul>
+          </div>
+  
+          <h3 class="cost">RM 500</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

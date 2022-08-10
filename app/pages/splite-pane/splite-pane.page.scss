@@ -1,0 +1,75 @@
+.split-pane {
+    ion-content {
+        --background: white;
+    }
+
+    .menuHeader {
+        height: 25vh;
+        margin-left: -4vh;
+        width: 120%;
+        border-radius: 0px 0px 50% 50%;
+        box-shadow: 0 1px 20px black;
+        background: linear-gradient(180deg, #bdd5ff 0%,#3880FF 100%);
+        // background: linear-gradient(45deg, rgba(0,116,217,1) 0%, rgba(0,157,238,1) 20%, rgba(0,191,220,1) 40%, rgba(0,218,178,1) 60%, rgba(138,238,133,1) 80%, rgba(249,248,113,1) 100%);
+        // background: linear-gradient(360deg, rgba(0,116,217,1) 0%, rgba(95,109,207,1) 20%, rgba(131,102,193,1) 40%, rgba(155,96,178,1) 61%, rgba(172,92,161,1) 81%, rgba(182,91,145,1) 100%);
+
+
+        ion-avatar {
+            transform: translateY(2vh);
+            width: 10vh;
+            height: 10vh;
+            text-align: center;
+            background: #ffffff;
+            margin-bottom: 25px;
+            border: 5px solid #ffffff;
+        }
+    
+        ion-label {
+            transform: translateY(2vh);
+            text-transform: capitalize;
+            vertical-align: middle;
+            text-align: center;
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+    }
+
+    .menuContent {
+        
+        ion-list {
+            margin-top: 30px;
+        }
+
+        ion-item {
+            --background: #ffffff;
+
+            ion-label {
+                color: #000000;
+            }
+
+            ion-icon {
+                color: grey;
+            }
+        }  
+
+        ion-item:hover {
+            // --background: linear-gradient(270deg, #ffffff 0%,#3880FF 100%);
+            --background: linear-gradient(90deg, rgba(0,116,217,1) 0%, rgba(67,142,246,1) 25%, rgba(104,169,255,1) 50%, rgba(137,196,255,1) 75%, rgba(169,225,255,1) 100%);
+
+            ion-label {
+                color: #ffffff;
+            }
+
+            ion-icon {
+                color: #ffffff;
+            }
+        }
+    }
+
+    .active-link {
+        --ion-text-color: var(--ion-color-primary);
+        font-weight: bold;
+    }
+
+}

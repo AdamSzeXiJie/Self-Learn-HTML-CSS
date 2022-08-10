@@ -1,0 +1,83 @@
+ion-toolbar {
+    --background: #ffffff;
+  
+    ion-back-button {
+      color: #0074D9;
+    }
+  }
+
+ion-content {
+    --background: rgb(240, 240, 240);
+}
+
+.accountDetail {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: minmax(200px, auto-fill);
+    grid-auto-flow: dense;
+    margin: 10px;
+
+    ion-card {
+        border-radius: 15px;
+    }
+
+    .userAvatar {
+        ion-avatar {
+            --border-radius: 100%;
+            width: 100% !important;
+            height: 100% !important;
+            max-width: 168px !important;  //any size
+            max-height: 168px !important; //any size
+        }
+    
+        h1 {
+            white-space: normal;
+            padding-bottom: 10px;
+        }
+    
+        ion-text {
+            white-space: normal;
+            color: grey;
+            text-align: justify;
+        }
+    }
+    
+    .academicAchievement {
+
+        ion-card-title {
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+        }
+    
+        h1 {
+            white-space: normal;
+        }
+    
+        ion-text {
+            white-space: normal;
+            color: grey;
+            text-align: justify;
+        }
+    }
+    
+    .cocuricularAchievement {
+
+        ion-card-title {
+            font-size: 30px;
+            font-weight: bold;
+            color: rgb(0, 0, 0);
+        }
+
+            
+        h1 {
+            text-overflow: inherit;
+            white-space: normal;
+        }
+    
+        ion-text {
+            text-align: justify;
+            color: grey;
+        }
+    }
+}

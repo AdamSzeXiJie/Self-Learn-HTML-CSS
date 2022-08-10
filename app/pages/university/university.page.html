@@ -1,0 +1,383 @@
+<ion-header>
+  <!-- Nav Bar -->
+  <header class="header">
+    <nav class="navbar">
+      <a href="/home" class="nav-logo">
+        <img slot="start" src="assets/Uni-Verse.png">
+      </a>
+
+      <ul #navMenu class="nav-menu">
+        <li class="nav-item">
+          <a href="/university" class="nav-link">Profile</a>
+        </li>
+        <li class="nav-item">
+          <a href="/swinburne-sarawak" class="nav-link">Setting</a>
+        </li>
+        <li class="nav-item">
+          <a href="/university" class="nav-link">University</a>
+        </li>
+        <li class="nav-item">
+          <a href="/accomodation" class="nav-link">Accomodation</a>
+        </li>
+        <li class="nav-item">
+          <a href="/about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">Log In</a>
+        </li>
+      </ul>
+
+      <div #hamburger class="hamburger" (click)="mobileMenu()">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+</ion-header>
+
+<ion-content>
+  <div class="search">
+    <div class="search-filter">
+      <form>
+        <div class="inner-form">
+          <div class="basic-search">
+            <div class="input-field">
+              <input id="search" type="text" placeholder="Search University Name">
+              <div class="icon-wrap">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M500.3 443.7l-119.7-119.7c27.22-40.41 40.65-90.9 33.46-144.7C401.8 87.79 326.8 13.32 235.2 1.723C99.01-15.51-15.51 99.01 1.724 235.2c11.6 91.64 86.08 166.7 177.6 178.9c53.8 7.189 104.3-6.236 144.7-33.46l119.7 119.7c15.62 15.62 40.95 15.62 56.57 0C515.9 484.7 515.9 459.3 500.3 443.7zM79.1 208c0-70.58 57.42-128 128-128s128 57.42 128 128c0 70.58-57.42 128-128 128S79.1 278.6 79.1 208z"/></svg>            </div>
+            </div>
+          </div>
+          <div class="advance-search">
+            <span class="desc">ADVANCED SEARCH</span>
+            <div class="row">
+              <div class="input-field">
+                <div class="input-select">
+                  <div class="choices" role="listbox" data-type="select-one" tabindex="0" aria-haspopup="true" aria-expanded="false" dir="ltr" aria-activedescendant="choices-choices-single-defaul-hp-item-choice-1">
+          <div class="choices__inner"><select data-trigger="" name="choices-single-defaul" class="choices__input is-hidden" tabindex="-1" style="display:none;" aria-hidden="true" data-choice="active"><option value="" selected="">Accessories</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable choices__placeholder" data-item="" data-id="1" data-value="" data-deletable="" aria-selected="true">
+              Type
+           <button type="button" class="choices__button" data-button="" aria-label="Remove item: ''">
+                Remove item
+              </button>
+            </div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false">
+          <div class="choices__list" dir="ltr" role="listbox"><div class="choices__item choices__item--choice choices__item--selectable choices__placeholder is-highlighted" data-select-text="" data-choice="" data-id="1" data-value="" data-choice-selectable="" id="choices-choices-single-defaul-hp-item-choice-1" role="option" aria-selected="true">
+            All
+          </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="2" data-value="Subject b" data-choice-selectable="" id="choices-choices-single-defaul-hp-item-choice-2" role="option">
+            Public
+          </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="3" data-value="Subject c" data-choice-selectable="" id="choices-choices-single-defaul-hp-item-choice-3" role="option">
+            Private
+          </div></div></div></div>
+                </div>
+              </div>
+              <div class="input-field">
+                <div class="input-select">
+                  <div class="choices" role="listbox" data-type="select-one" tabindex="0" aria-haspopup="true" aria-expanded="false" dir="ltr" aria-activedescendant="choices-choices-single-defaul-s5-item-choice-1">
+          <div class="choices__inner"><select data-trigger="" name="choices-single-defaul" class="choices__input is-hidden" tabindex="-1" style="display:none;" aria-hidden="true" data-choice="active"><option value="" selected="">Color</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable choices__placeholder" data-item="" data-id="1" data-value="" data-deletable="" aria-selected="true">
+              Location
+           <button type="button" class="choices__button" data-button="" aria-label="Remove item: ''">
+                Remove item
+              </button>
+            </div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false">
+          <div class="choices__list" dir="ltr" role="listbox"><div class="choices__item choices__item--choice choices__item--selectable choices__placeholder is-highlighted" data-select-text="" data-choice="" data-id="1" data-value="" data-choice-selectable="" id="choices-choices-single-defaul-s5-item-choice-1" role="option" aria-selected="true">
+            Kuching
+          </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="2" data-value="Subject b" data-choice-selectable="" id="choices-choices-single-defaul-s5-item-choice-2" role="option">
+            Subject b
+          </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="3" data-value="Subject c" data-choice-selectable="" id="choices-choices-single-defaul-s5-item-choice-3" role="option">
+            Subject c
+          </div></div></div></div>
+                </div>
+              </div>
+              <div class="input-field">
+                <div class="input-select">
+                  <div class="choices" role="listbox" data-type="select-one" tabindex="0" aria-haspopup="true" aria-expanded="false" dir="ltr" aria-activedescendant="choices-choices-single-defaul-o2-item-choice-1">
+          <div class="choices__inner"><select data-trigger="" name="choices-single-defaul" class="choices__input is-hidden" tabindex="-1" style="display:none;" aria-hidden="true" data-choice="active"><option value="" selected="">Size</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable choices__placeholder" data-item="" data-id="1" data-value="" data-deletable="" aria-selected="true">
+              Course
+           <button type="button" class="choices__button" data-button="" aria-label="Remove item: ''">
+                Remove item
+              </button>
+            </div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false">
+          <div class="choices__list" dir="ltr" role="listbox"><div class="choices__item choices__item--choice choices__item--selectable choices__placeholder is-highlighted" data-select-text="" data-choice="" data-id="1" data-value="" data-choice-selectable="" id="choices-choices-single-defaul-o2-item-choice-1" role="option" aria-selected="true">
+            Size
+          </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="2" data-value="Subject b" data-choice-selectable="" id="choices-choices-single-defaul-o2-item-choice-2" role="option">
+            Subject b
+          </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="3" data-value="Subject c" data-choice-selectable="" id="choices-choices-single-defaul-o2-item-choice-3" role="option">
+            Subject c
+          </div></div></div></div>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="row second">
+              <div class="input-field">
+                <div class="input-select">
+                  <div class="choices" role="listbox" data-type="select-one" tabindex="0" aria-haspopup="true" aria-expanded="false" dir="ltr" aria-activedescendant="choices-choices-single-defaul-v0-item-choice-1">
+          <div class="choices__inner"><select data-trigger="" name="choices-single-defaul" class="choices__input is-hidden" tabindex="-1" style="display:none;" aria-hidden="true" data-choice="active"><option value="" selected="">Sale</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable choices__placeholder" data-item="" data-id="1" data-value="" data-deletable="" aria-selected="true">
+              Sale
+           <button type="button" class="choices__button" data-button="" aria-label="Remove item: ''">
+                Remove item
+              </button>
+            </div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false">
+          <div class="choices__list" dir="ltr" role="listbox"><div class="choices__item choices__item--choice choices__item--selectable choices__placeholder is-highlighted" data-select-text="" data-choice="" data-id="1" data-value="" data-choice-selectable="" id="choices-choices-single-defaul-v0-item-choice-1" role="option" aria-selected="true">
+            Sale
+          </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="2" data-value="Subject b" data-choice-selectable="" id="choices-choices-single-defaul-v0-item-choice-2" role="option">
+            Subject b
+          </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="3" data-value="Subject c" data-choice-selectable="" id="choices-choices-single-defaul-v0-item-choice-3" role="option">
+            Subject c
+          </div></div></div></div>
+                </div>
+              </div>
+              <div class="input-field">
+                <div class="input-select">
+                  <div class="choices" role="listbox" data-type="select-one" tabindex="0" aria-haspopup="true" aria-expanded="false" dir="ltr" aria-activedescendant="choices-choices-single-defaul-z1-item-choice-5">
+          <div class="choices__inner"><select data-trigger="" name="choices-single-defaul" class="choices__input is-hidden" tabindex="-1" style="display:none;" aria-hidden="true" data-choice="active"><option value="" selected="">Time</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable choices__placeholder" data-item="" data-id="1" data-value="" data-deletable="" aria-selected="true">
+              Time
+           <button type="button" class="choices__button" data-button="" aria-label="Remove item: ''">
+                Remove item
+              </button>
+            </div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false">
+          <div class="choices__list" dir="ltr" role="listbox"><div class="choices__item choices__item--choice choices__item--selectable choices__placeholder is-highlighted" data-select-text="" data-choice="" data-id="5" data-value="" data-choice-selectable="" id="choices-choices-single-defaul-z1-item-choice-5" role="option" aria-selected="true">
+            Time
+          </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="1" data-value="Last time" data-choice-selectable="" id="choices-choices-single-defaul-z1-item-choice-1" role="option">
+            Last time
+          </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="2" data-value="This month" data-choice-selectable="" id="choices-choices-single-defaul-z1-item-choice-2" role="option">
+            This month
+          </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="3" data-value="This week" data-choice-selectable="" id="choices-choices-single-defaul-z1-item-choice-3" role="option">
+            This week
+          </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="4" data-value="This year" data-choice-selectable="" id="choices-choices-single-defaul-z1-item-choice-4" role="option">
+            This year
+          </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="6" data-value="Today" data-choice-selectable="" id="choices-choices-single-defaul-z1-item-choice-6" role="option">
+            Today
+          </div></div></div></div>
+                </div>
+              </div>
+              <div class="input-field">
+                <div class="input-select">
+                  <div class="choices" role="listbox" data-type="select-one" tabindex="0" aria-haspopup="true" aria-expanded="false" dir="ltr" aria-activedescendant="choices-choices-single-defaul-cr-item-choice-3">
+          <div class="choices__inner"><select data-trigger="" name="choices-single-defaul" class="choices__input is-hidden" tabindex="-1" style="display:none;" aria-hidden="true" data-choice="active"><option value="" selected="">Type</option></select><div class="choices__list choices__list--single"><div class="choices__item choices__item--selectable choices__placeholder" data-item="" data-id="1" data-value="" data-deletable="" aria-selected="true">
+              Type
+           <button type="button" class="choices__button" data-button="" aria-label="Remove item: ''">
+                Remove item
+              </button>
+            </div></div></div><div class="choices__list choices__list--dropdown" aria-expanded="false">
+          <div class="choices__list" dir="ltr" role="listbox"><div class="choices__item choices__item--choice choices__item--selectable choices__placeholder is-highlighted" data-select-text="" data-choice="" data-id="3" data-value="" data-choice-selectable="" id="choices-choices-single-defaul-cr-item-choice-3" role="option" aria-selected="true">
+            Type
+          </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="1" data-value="Subject b" data-choice-selectable="" id="choices-choices-single-defaul-cr-item-choice-1" role="option">
+            Subject b
+          </div><div class="choices__item choices__item--choice choices__item--selectable" data-select-text="" data-choice="" data-id="2" data-value="Subject c" data-choice-selectable="" id="choices-choices-single-defaul-cr-item-choice-2" role="option">
+            Subject c
+          </div></div></div></div>
+                </div>
+              </div>
+            </div> -->
+            <div class="row third">
+              <div class="input-field">
+                <div class="result-count">
+                  <span>108 </span>results</div>
+                <div class="group-btn">
+                  <button class="btn-delete" id="delete">RESET</button>
+                  <button class="btn-search">SEARCH</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <div class="testingGrid" *ngIf="dataLoaded">
+    <div class="testing" *ngFor="let d of data | filter:searchTerm">
+      <a href="/swinburne-sarawak"></a>
+      <img src="assets/FinalUniLogo/{{d.uniLogo}}">
+  
+      <div class="uni-description">
+        <div class="uni-description-header">
+          <h1 class="sub-header-text">{{d.uniName}}</h1>
+          <ion-button fill="clear" slot="icon-only" href="/about"><ion-icon name="heart-outline"></ion-icon></ion-button>
+        </div>
+
+        <div class="uni-location">
+          <ion-icon name="location-sharp"></ion-icon>
+          <div>
+            <h2 class="sub-text">{{d.country}}</h2>
+            <h3 class="sub-text">{{d.city}}, {{d.state}}</h3>
+          </div>
+        </div>
+
+        <div class="uni-ranking">
+          <ion-icon name="ribbon-sharp"></ion-icon>
+          <div>
+            <h2 class="sub-text">QS Ranking</h2>
+            <h3 class="sub-text">{{d.ranking}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="testing-card" *ngFor="let d of data | filter:searchTerm">
+      <a href="/swinburne-sarawak"></a>
+      <img src="assets/FinalUniLogo/{{d.uniLogo}}">
+      <ion-button class="fav-button" fill="clear" slot="icon-only" href="/about"><ion-icon name="heart-outline"></ion-icon></ion-button>
+  
+      <div class="uni-description">
+        <div class="uni-description-header">
+          <h1 class="sub-header-text">{{d.uniName}}</h1>
+        </div>
+  
+        <div class="uni-location">
+          <ion-icon name="location-sharp"></ion-icon>
+          <div>
+            <h2 class="sub-text">{{d.country}}</h2>
+            <h3 class="sub-text">{{d.city}}, {{d.state}}</h3>
+          </div>
+        </div>
+  
+        <div class="uni-ranking">
+          <ion-icon name="ribbon-sharp"></ion-icon>
+          <div>
+            <h2 class="sub-text">QS Ranking</h2>
+            <h3 class="sub-text">{{d.ranking}}</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="nearest-university">
+    <h1 class="header-text">Nearest University</h1>
+
+    <div class="nearest-uni-carousel">
+      <div class="uni-card">
+        <img src="/assets/FinalUniLogo/SUT.png">
+
+        <div>
+          <h2 class="sub-header-text">Swinburne University of Technology Sarawak</h2>
+        </div>
+
+        <!-- <div class="location">
+          <ion-icon name="location-sharp"></ion-icon>
+          <div>
+            <h2>Malaysia</h2>
+            <h3>Kuching, Sarawak</h3>
+          </div>
+        </div> -->
+
+        <div class="distance">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M207.9 95.99c26.5 0 47.1-21.49 47.1-47.99S234.4 0 207.9 0S159.1 21.49 159.1 47.99S181.4 95.99 207.9 95.99zM73.61 385.7c-3.25 8.125-7.998 15.5-14.25 21.49l-49.99 50.12c-6.249 6.246-9.373 14.46-9.373 22.68C-.0003 505.1 22.93 512 31.99 512c8.186 0 16.37-3.125 22.62-9.375l59.36-59.48c6.125-6 10.87-13.37 14.25-21.49l13.5-33.74c-55.36-60.23-38.74-41.74-47.49-53.74L73.61 385.7zM320 273.9c0-11.77-6.392-23.15-17.57-28.74l-23.24-11.88L269.4 203.9c-5.552-16.8-33.04-75.89-102.9-75.89c-35.58 0-55.44 10.22-92.58 25.26C52.36 161.9 34.74 178.4 24.24 199.4L17.62 213C15.33 217.6 14.24 222.5 14.24 227.3c0 17.25 13.78 31.97 31.63 31.97c11.6 0 22.78-6.455 28.37-17.63l6.748-13.62c3.5-7 9.248-12.5 16.5-15.38L124.2 201.8L109.1 262.5C107.8 267.6 107.2 272.9 107.2 278c0 15.79 5.886 31.29 16.8 43.24l59.86 65.51c7.25 7.875 12.37 17.38 14.87 27.62l18.37 73.39c3.609 14.45 16.69 24.2 31.04 24.2c19.31 0 32.01-16.13 32.01-32.05c0-2.531-.3053-5.097-.9435-7.652l-22.25-89.01c-2.625-10.38-7.748-20.01-14.87-27.76l-45.49-49.76l17.12-68.63l5.498 16.5c5.375 16.13 16.75 29.38 31.74 37.01l23.24 11.75c4.543 2.29 9.371 3.375 14.13 3.375C304.8 305.8 320 292.5 320 273.9z"/></svg>
+          <h2 class="sub-text">4.5 km away</h2>
+        </div>
+      </div>
+
+      <div class="uni-card">
+        <img src="/assets/FinalUniLogo/SUT.png">
+
+        <div>
+          <h2 class="sub-header-text">Swinburne University of Technology Sarawak</h2>
+        </div>
+
+        <!-- <div class="location">
+          <ion-icon name="location-sharp"></ion-icon>
+          <div>
+            <h2>Malaysia</h2>
+            <h3>Kuching, Sarawak</h3>
+          </div>
+        </div> -->
+
+        <div class="distance">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M207.9 95.99c26.5 0 47.1-21.49 47.1-47.99S234.4 0 207.9 0S159.1 21.49 159.1 47.99S181.4 95.99 207.9 95.99zM73.61 385.7c-3.25 8.125-7.998 15.5-14.25 21.49l-49.99 50.12c-6.249 6.246-9.373 14.46-9.373 22.68C-.0003 505.1 22.93 512 31.99 512c8.186 0 16.37-3.125 22.62-9.375l59.36-59.48c6.125-6 10.87-13.37 14.25-21.49l13.5-33.74c-55.36-60.23-38.74-41.74-47.49-53.74L73.61 385.7zM320 273.9c0-11.77-6.392-23.15-17.57-28.74l-23.24-11.88L269.4 203.9c-5.552-16.8-33.04-75.89-102.9-75.89c-35.58 0-55.44 10.22-92.58 25.26C52.36 161.9 34.74 178.4 24.24 199.4L17.62 213C15.33 217.6 14.24 222.5 14.24 227.3c0 17.25 13.78 31.97 31.63 31.97c11.6 0 22.78-6.455 28.37-17.63l6.748-13.62c3.5-7 9.248-12.5 16.5-15.38L124.2 201.8L109.1 262.5C107.8 267.6 107.2 272.9 107.2 278c0 15.79 5.886 31.29 16.8 43.24l59.86 65.51c7.25 7.875 12.37 17.38 14.87 27.62l18.37 73.39c3.609 14.45 16.69 24.2 31.04 24.2c19.31 0 32.01-16.13 32.01-32.05c0-2.531-.3053-5.097-.9435-7.652l-22.25-89.01c-2.625-10.38-7.748-20.01-14.87-27.76l-45.49-49.76l17.12-68.63l5.498 16.5c5.375 16.13 16.75 29.38 31.74 37.01l23.24 11.75c4.543 2.29 9.371 3.375 14.13 3.375C304.8 305.8 320 292.5 320 273.9z"/></svg>
+          <h2 class="sub-text">4.5 km away</h2>
+        </div>
+      </div>
+
+      <div class="uni-card">
+        <img src="/assets/FinalUniLogo/SUT.png">
+
+        <div>
+          <h2 class="sub-header-text">Swinburne University of Technology Sarawak</h2>
+        </div>
+
+        <!-- <div class="location">
+          <ion-icon name="location-sharp"></ion-icon>
+          <div>
+            <h2>Malaysia</h2>
+            <h3>Kuching, Sarawak</h3>
+          </div>
+        </div> -->
+
+        <div class="distance">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M207.9 95.99c26.5 0 47.1-21.49 47.1-47.99S234.4 0 207.9 0S159.1 21.49 159.1 47.99S181.4 95.99 207.9 95.99zM73.61 385.7c-3.25 8.125-7.998 15.5-14.25 21.49l-49.99 50.12c-6.249 6.246-9.373 14.46-9.373 22.68C-.0003 505.1 22.93 512 31.99 512c8.186 0 16.37-3.125 22.62-9.375l59.36-59.48c6.125-6 10.87-13.37 14.25-21.49l13.5-33.74c-55.36-60.23-38.74-41.74-47.49-53.74L73.61 385.7zM320 273.9c0-11.77-6.392-23.15-17.57-28.74l-23.24-11.88L269.4 203.9c-5.552-16.8-33.04-75.89-102.9-75.89c-35.58 0-55.44 10.22-92.58 25.26C52.36 161.9 34.74 178.4 24.24 199.4L17.62 213C15.33 217.6 14.24 222.5 14.24 227.3c0 17.25 13.78 31.97 31.63 31.97c11.6 0 22.78-6.455 28.37-17.63l6.748-13.62c3.5-7 9.248-12.5 16.5-15.38L124.2 201.8L109.1 262.5C107.8 267.6 107.2 272.9 107.2 278c0 15.79 5.886 31.29 16.8 43.24l59.86 65.51c7.25 7.875 12.37 17.38 14.87 27.62l18.37 73.39c3.609 14.45 16.69 24.2 31.04 24.2c19.31 0 32.01-16.13 32.01-32.05c0-2.531-.3053-5.097-.9435-7.652l-22.25-89.01c-2.625-10.38-7.748-20.01-14.87-27.76l-45.49-49.76l17.12-68.63l5.498 16.5c5.375 16.13 16.75 29.38 31.74 37.01l23.24 11.75c4.543 2.29 9.371 3.375 14.13 3.375C304.8 305.8 320 292.5 320 273.9z"/></svg>
+          <h2 class="sub-text">4.5 km away</h2>
+        </div>
+      </div>
+
+      <div class="uni-card">
+        <img src="/assets/FinalUniLogo/SUT.png">
+
+        <div>
+          <h2 class="sub-header-text">Swinburne University of Technology Sarawak</h2>
+        </div>
+
+        <!-- <div class="location">
+          <ion-icon name="location-sharp"></ion-icon>
+          <div>
+            <h2>Malaysia</h2>
+            <h3>Kuching, Sarawak</h3>
+          </div>
+        </div> -->
+
+        <div class="distance">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path d="M207.9 95.99c26.5 0 47.1-21.49 47.1-47.99S234.4 0 207.9 0S159.1 21.49 159.1 47.99S181.4 95.99 207.9 95.99zM73.61 385.7c-3.25 8.125-7.998 15.5-14.25 21.49l-49.99 50.12c-6.249 6.246-9.373 14.46-9.373 22.68C-.0003 505.1 22.93 512 31.99 512c8.186 0 16.37-3.125 22.62-9.375l59.36-59.48c6.125-6 10.87-13.37 14.25-21.49l13.5-33.74c-55.36-60.23-38.74-41.74-47.49-53.74L73.61 385.7zM320 273.9c0-11.77-6.392-23.15-17.57-28.74l-23.24-11.88L269.4 203.9c-5.552-16.8-33.04-75.89-102.9-75.89c-35.58 0-55.44 10.22-92.58 25.26C52.36 161.9 34.74 178.4 24.24 199.4L17.62 213C15.33 217.6 14.24 222.5 14.24 227.3c0 17.25 13.78 31.97 31.63 31.97c11.6 0 22.78-6.455 28.37-17.63l6.748-13.62c3.5-7 9.248-12.5 16.5-15.38L124.2 201.8L109.1 262.5C107.8 267.6 107.2 272.9 107.2 278c0 15.79 5.886 31.29 16.8 43.24l59.86 65.51c7.25 7.875 12.37 17.38 14.87 27.62l18.37 73.39c3.609 14.45 16.69 24.2 31.04 24.2c19.31 0 32.01-16.13 32.01-32.05c0-2.531-.3053-5.097-.9435-7.652l-22.25-89.01c-2.625-10.38-7.748-20.01-14.87-27.76l-45.49-49.76l17.12-68.63l5.498 16.5c5.375 16.13 16.75 29.38 31.74 37.01l23.24 11.75c4.543 2.29 9.371 3.375 14.13 3.375C304.8 305.8 320 292.5 320 273.9z"/></svg>
+          <h2 class="sub-text">4.5 km away</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="!dataLoaded" class="loadingPos" [ngModal]="loadData($event)">
+    <div class="loading">
+      <h2>Loading Universities</h2>
+      <div class="dotPos">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="uniList" *ngIf="dataLoaded">
+    <ion-card button="true" routerLink="/swinburne-sarawak" *ngFor="let d of data | filter:searchTerm">
+      <ion-card-header>
+        <img src="../assets/FinalUniLogo/{{d.uniLogo}}">
+      </ion-card-header> -->
+      <!-- <ion-card-title>{{d.uniName}}</ion-card-title> -->
+
+      <!-- <ion-card-content>
+        <h1>{{d.uniName}}</h1>
+
+        <div class="contentGrid" >
+          <div>
+            <h2>{{d.country}}</h2>
+            <h3>{{d.city}}, {{d.state}}</h3>
+          </div>
+
+          <div>
+            <ion-text>
+              QS Ranking
+              <br>
+              <ion-icon name="ribbon-sharp"></ion-icon>
+              {{d.ranking}}
+            </ion-text>
+          </div>
+        </div>
+      </ion-card-content>
+    </ion-card>
+  </div> -->
+  
+  <!-- <ion-infinite-scroll (ionInfinite)="loadData($event)">
+    <ion-infinite-scroll-content loadingSpinner="null">
+
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll> -->
+</ion-content>

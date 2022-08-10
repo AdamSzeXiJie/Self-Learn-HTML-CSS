@@ -1,0 +1,64 @@
+<!-- Header -->
+<ion-header>
+  <ion-toolbar>
+
+  <!-- Back Button -->
+  <ion-buttons slot="start">
+    <ion-back-button defaultHref="/" text="" icon="chevron-back-sharp"></ion-back-button>
+  </ion-buttons>
+
+  <!-- Title -->
+  <ion-title>Setting</ion-title>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <!-- Dark Mode -->
+    <ion-item lines="full">
+      <ion-toggle class="darkmode" [(ngModel)]="darkMode"></ion-toggle>
+      <ion-label>Dark Mode</ion-label>
+    </ion-item>
+
+    <!-- Language -->
+    <ion-item lines="full" id="trigger-button">
+      <ion-modal class="languageModal" trigger="trigger-button">
+        <ng-template>
+          <ion-content>
+
+            <!-- Select Language -->
+            <ion-list>
+              <ion-radio-group value="english">
+                <ion-list-header>
+                  <ion-label>Select A Language</ion-label>
+                </ion-list-header>
+            
+                <ion-item lines="full">
+                  <ion-label>English</ion-label>
+                  <ion-radio slot="start" value="english"></ion-radio>
+                </ion-item>
+            
+                <ion-item lines="full">
+                  <ion-label>Chinese</ion-label>
+                  <ion-radio slot="start" value="chinese"></ion-radio>
+                </ion-item>
+            
+                <ion-item lines="full">
+                  <ion-label>Japanese</ion-label>
+                  <ion-radio slot="start" value="japanese"></ion-radio>
+                </ion-item>
+                
+              </ion-radio-group>
+              
+            </ion-list>
+          </ion-content>
+
+        </ng-template>
+      </ion-modal>
+      <ion-icon name="language" size="large" slot="start"></ion-icon>
+      <ion-label>Language</ion-label>
+    </ion-item>
+    
+  </ion-list>
+</ion-content>

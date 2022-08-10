@@ -1,0 +1,115 @@
+ion-toolbar {
+    --background: #ffffff;
+
+    ion-back-button {
+        color: #0074D9;
+    }       
+}
+
+// .compare {
+//     h1 {
+//         padding-left: 10px;
+//         font-family: 'roboto';
+//         font-size: 30px;
+//         font-weight: 800;
+//     }
+
+//     ion-grid {
+//         margin-left: 10px;
+//         margin-right: 10px;
+//     }
+
+//     .head {
+//         ion-col {
+//             text-align: center;
+//             border: 1px solid gray;
+//         }
+//     }
+
+//     ion-col {
+//         text-align: center;
+//         border: 1px solid gray;
+//     }
+// }
+
+// ion-col {
+//     text-align: center;
+//     border: 1px solid gray;
+// }
+
+.comparison {
+    position: relative;
+
+    .compare {
+        ion-card-title {
+            font-family: 'roboto';
+            font-size: 30px;
+            font-weight: 800;
+        }
+
+        &:nth-child(n) {
+            position: sticky;
+            z-index: n;
+            top: 0%;
+        }
+
+        &:nth-child(odd) {
+            ion-card-title {
+                text-align: left;
+            }
+        }
+
+        &:nth-child(even) {
+            ion-card-title {
+                text-align: right;
+            }
+        }
+    }
+
+    ion-card-content {
+
+        h2 {
+            font-weight: 600;
+            text-align: left;
+            font-size: clamp(25px, 3vw, 32px);
+            color: #0074D9;
+        }
+
+        h4 {
+            font-weight: 400;
+            text-align: left;
+            font-size: 16px;
+            color: rgb(87, 87, 87);
+        }
+
+        h5 {
+            font-weight: 400;
+            text-align: left;
+            font-size: 16px;
+            padding-bottom: 10px;
+            color: rgb(87, 87, 87);
+        }
+
+        ion-button {
+            padding-right: 10px;
+            font-weight: 600;
+            font-size: 16px;
+        }
+    }
+}
+
+.intake {
+    background: #faffa4;
+}
+
+.fees {
+    background: #8ffca9;
+}
+
+.duration {
+    background: #fc8181;
+}
+
+.module {
+    background: #89c8ff;
+}
